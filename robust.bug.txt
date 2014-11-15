@@ -1,0 +1,10 @@
+model {
+for (i in 1:N) {y[i] ~ dnorm(mu[i],p[i])
+                         p[i] <- tau*lam[i]
+                         lam[i] ~ dgamma(2,2)
+                         mu[i] <- b[1]+b[2]*x[i]}
+for (j in 1:2) {b[j] ~ dnorm(0,0.001)}
+tau ~ dgamma(0.001,0.001) 
+}
+
+

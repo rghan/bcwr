@@ -1,0 +1,8 @@
+model
+{    
+  for( year in 1 : N ) {
+       D[year] ~ dpois(mu[year])    
+       log(mu[year]) <- b[1] + step(year - changeyear) * b[2]    }
+  for (j in 1:2) {b[j] ~ dnorm( 0.0,1.0E-6)}
+  changeyear ~ dunif(1,N) 
+}
