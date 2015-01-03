@@ -1,6 +1,8 @@
 # Bayesian Computation with R (Second Edition)
 # by Jim Albert
 
+library(LearnBayes)
+
 # 2 Introduction to Bayesian Thinking
 
 # 2.1 Introduction
@@ -34,10 +36,10 @@ xyplot(Probability ~ P | Type, data = data, layout = c(1, 2), type = "h", lwd = 
 
 quantile2 <- list(p = 0.9, x = 0.5)
 quantile1 <- list(p = 0.5, x = 0.3)
-beta.select(quantile1, quantile2)
+ab <- beta.select(quantile1,quantile2)
 
-a <- 3.26
-b <- 7.19
+a <- ab[1]
+b <- ab[2]
 s <- 11
 f <- 16
 curve(dbeta(x, a + s, b + f), from = 0, to = 1, xlab = "p", ylab = "Density", lty = 1, lwd = 4)
@@ -54,7 +56,7 @@ qbeta(c(0.05, 0.95), a + s, b + f)
 
 ps <- rbeta(1000, a + s, b + f)
 
-hist(ps, xlab = "p",main = "")
+hist(ps, xlab = "p", main = "")
 
 # Fig. 2.4. A simulated sample from the beta posterior distribution of p.
 
