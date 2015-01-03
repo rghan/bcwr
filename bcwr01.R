@@ -99,6 +99,8 @@ tstatistic(data.x, data.y)
 
 # 1.3.3 Programming a Monte Carlo Simulation
 
+# simulation algorithm for normal populations
+
 alpha <- 0.1  # sets alpha
 m <- 10       # sets m
 n <- 10       # sets n
@@ -115,6 +117,9 @@ true.sig.level <- n.reject/N # est. is proportion of rejections
 true.sig.level
 
 # 1.3.4 The Behavior of the True Significance Level Under Different Assumptions 
+
+# simulation algorithm for normal and exponential populations
+# storing the values of the t statistic in vector tstat
 
 m <- 10
 n <- 10
