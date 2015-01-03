@@ -92,7 +92,7 @@ prior <- c(1, 5.2, 8, 7.2, 4.6, 2.1, 0.7, 0.1, 0, 0)
 prior <- prior/sum(prior)
 m <- 20
 ys <- 0:20
-pred = pdiscp(p, prior, m, ys)
+pred <- pdiscp(p, prior, m, ys)
 round(cbind(0:20, pred), 3)
 
 ab <- c(3.26, 7.19)

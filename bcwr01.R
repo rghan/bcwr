@@ -26,7 +26,6 @@ studentdata[1, ]
 
 table(studentdata$Drink)
 
-
 barplot(table(studentdata$Drink), xlab = "Drink", ylab = "Count")
 
 # Fig. 1.1. Barplot of the drinking preference of the statistics students.
@@ -53,7 +52,6 @@ summary(female.Haircut)
 summary(male.Haircut)
 
 # 1.2.5 R Commands for Studying Relationships 
-
 
 par(pty = "s")
 
